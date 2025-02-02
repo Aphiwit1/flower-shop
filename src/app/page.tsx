@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <div className="relative max-w-[500px] mx-auto">
 
-
       <Image
         src="/img/bloem-home-logo-4x.png" // Ensure this path is correct
         alt="Bloem Home Logo"
