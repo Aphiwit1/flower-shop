@@ -100,13 +100,13 @@ const MobileSidebar = ({ handleOnToggle, }: MobileSidebarProps) => {
 
             <div className='pb-5  flex flex-col gap-y-5 border-b-2 border-dashed border-pink-300'>
             <SidebarLink
-              href='/flower-a'
+              href='/view-blair-collection'
               icon={''}
-              label={'Your collection'}
+              label={'Blair collection'}
               onClick={handleClose}
             />
                <SidebarLink
-              href='/flower-a'
+              href='customize-blair-collection'
               icon={''}
               label={'Customize your own'}
               onClick={handleClose}
