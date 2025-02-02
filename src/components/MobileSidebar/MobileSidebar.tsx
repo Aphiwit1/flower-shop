@@ -78,7 +78,7 @@ const MobileSidebar = ({ handleOnToggle, }: MobileSidebarProps) => {
 
               />
               <SidebarLink
-                href='/customize-yours-collection'
+                href='/customize-your-collection'
                 icon={''}
                 label={'Customize yours collection'}
                 onClick={handleClose}
