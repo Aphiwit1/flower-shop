@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_Thai } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 
-const geistSans = Geist({
+const geistSans = Noto_Sans_Thai({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
+const geistMono = Noto_Sans_Thai({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });

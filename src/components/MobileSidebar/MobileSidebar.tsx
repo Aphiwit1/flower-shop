@@ -68,7 +68,7 @@ const MobileSidebar = ({ handleOnToggle, }: MobileSidebarProps) => {
 
         <section className='flex flex-col justify-between h-full'>
           <div className='flex flex-col mt-5 gap-y-6 text-gray-700'>
-            <div className=' pb-5  flex flex-col gap-y-2 border-b-2 border-dashed border-gray-400'>
+            <div className=' pb-5  flex flex-col gap-y-5 border-b-2 border-dashed border-gray-400'>
               <SidebarLink
                 href='/view-your-collection'
                 icon={''}
@@ -86,7 +86,7 @@ const MobileSidebar = ({ handleOnToggle, }: MobileSidebarProps) => {
               />
             </div>
 
-            <div className='pb-5  flex flex-col gap-y-2 border-b-2 border-dashed border-gray-400'>
+            <div className='pb-5  flex flex-col gap-y-5 border-b-2 border-dashed border-gray-400'>
               <SidebarLink
                 href='/view-viva-collection'
                 icon={''}
@@ -103,7 +103,7 @@ const MobileSidebar = ({ handleOnToggle, }: MobileSidebarProps) => {
               />
             </div>
 
-            <div className='pb-5  flex flex-col gap-y-2 border-b-2 border-dashed border-gray-400'>
+            <div className='pb-5  flex flex-col gap-y-5 border-b-2 border-dashed border-gray-400'>
               <SidebarLink
                 href='/view-blair-collection'
                 icon={''}
@@ -120,7 +120,7 @@ const MobileSidebar = ({ handleOnToggle, }: MobileSidebarProps) => {
               />
             </div>
 
-            <div className=' border-gray-800 flex flex-col gap-y-2'>
+            <div className=' border-gray-800 flex flex-col gap-y-5'>
              <SidebarLink
                href="/view-riri-collection"
                icon={""}
