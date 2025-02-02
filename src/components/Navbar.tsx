@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import MobileSidebar from './MobileSidebar/MobileSidebar'
+import Link from 'next/link'
 
 export default function Navbar() {
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
@@ -12,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="border-gray-200 bg-gray-50 cursor-pointer">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-   <div className="text-gray-700 font-bold">Bloem.wednesday</div>
+   <Link href='/' className="text-gray-700 font-bold">Bloem.wednesday</Link>
 
       <button onClick={() =>handleOnToggleMobileSidebar(true)} className="text-gray-700 flex gap-2 items-center border border-gray-700 rounded-md px-3 py-1 cursor-pointer">
      
