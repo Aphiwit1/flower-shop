@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative max-w-[500px] mx-auto">
+    <div className="relative max-w-[500px] mx-auto pt-7">
 
       <Image
         src="/img/bloem-home-logo-4x.png" // Ensure this path is correct

@@ -12,7 +12,7 @@ export default function Navbar() {
   }
   return (
     <nav className="border-gray-200 bg-gray-50 cursor-pointer">
-  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+  <div className=" flex flex-wrap items-center justify-between mx-auto p-4 fixed top0 w-full bg-white z-10 mb-10">
    <Link href='/' className="text-gray-700 font-bold">Bloem.wednesday</Link>
 
       <button onClick={() =>handleOnToggleMobileSidebar(true)} className="text-gray-700 flex gap-2 items-center border border-gray-700 rounded-md px-3 py-1 cursor-pointer">

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="relative max-w-[500px] mx-auto">
+    <div className="relative max-w-[500px] mx-auto pt-7">
       <Image
         src="/img/riri-collection/riri-collection-1-4x.png"
         alt="view riri collection 1"
