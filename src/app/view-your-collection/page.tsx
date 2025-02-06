@@ -34,6 +34,14 @@ export default function Page() {
         height={150}
         className="w-full"
       />
+
+      <Image
+        src="/img/your-collection/your-collection-5-4x.png"
+        alt="view your collection 1"
+        width={300}
+        height={150}
+        className="w-full"
+      />
     </div>
   );
 }
