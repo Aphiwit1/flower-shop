@@ -1,18 +1,15 @@
-
-"use client"
-import withMobileSidebar from './withMobileSidebar'
-import { MobileSidebarProps } from './interface'
-import Link from 'next/link'
-
-
+"use client";
+import withMobileSidebar from "./withMobileSidebar";
+import { MobileSidebarProps } from "./interface";
+import Link from "next/link";
 
 interface SidebarLinkProps {
-  href: string
-  icon: unknown
-  label: string
-  onClick: () => void
-  isExternalLink?: boolean
-  className?: string
+  href: string;
+  icon: unknown;
+  label: string;
+  onClick: () => void;
+  isExternalLink?: boolean;
+  className?: string;
 }
 
 const SidebarLink = ({
@@ -26,122 +23,139 @@ const SidebarLink = ({
     return (
       <a
         href={href}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='flex items-center gap-x-2 text-black-6'
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-x-2 text-black-6"
       >
         <span>{label}</span>
       </a>
-    )
+    );
   }
 
   return (
     <div onClick={onClick}>
-      <Link className={'flex items-center gap-x-2 cursor-pointer ' + className} href={href}>
-        <span className='text-black-6'>{label}</span>
+      <Link
+        className={"flex items-center gap-x-2 cursor-pointer " + className}
+        href={href}
+      >
+        <span className="text-black-6">{label}</span>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-const MobileSidebar = ({ handleOnToggle, }: MobileSidebarProps) => {
-
+const MobileSidebar = ({ handleOnToggle }: MobileSidebarProps) => {
   //   const { ref, animationClassName } = useMobileSidebarAnimation(isVisible)
 
-  const handleClose = () => handleOnToggle(false)
+  const handleClose = () => handleOnToggle(false);
 
   return (
-    <nav
-
-      className={(
-        'bg-[#ECE0EA] h-full w-full fixed top-0 left-0 z-20 p-5'
-      )}
-    >
-      <div className='h-full max-w-7xl mx-auto flex flex-col '>
-        <section className='flex justify-between pb-2 border-b border-gray-700 text-gray-700'>
-          <Link href='/' className="text-gray-700 font-bold">Bloem.wednesday</Link>
-          <div className='text-gray-700 flex gap-2 items-center rounded-md px-3 py-1  font-boldcursor-pointer' onClick={handleClose}>
-            X
-            {/* <span className='text-x'>close menu</span> */}
+    <nav className={"bg-[#ECE0EA] h-full w-full fixed top-0 left-0 z-20 p-5"}>
+      <div className="h-full max-w-7xl mx-auto flex flex-col ">
+        <section className="flex justify-between pb-2 border-b border-gray-700 text-gray-700">
+          <Link href="/" className="text-gray-700 font-bold">
+            Bloem.wednesday
+          </Link>
+          <div
+            className="text-gray-700 flex gap-2 items-center rounded-md px-3 py-1  font-boldcursor-pointer"
+            onClick={handleClose}
+          >
+            X{/* <span className='text-x'>close menu</span> */}
           </div>
         </section>
 
-        <section className='flex flex-col justify-between h-full'>
-          <div className='flex flex-col mt-5 gap-y-6 text-gray-700'>
-            <div className=' pb-5  flex flex-col gap-y-5 border-b-2 border-dashed border-gray-400'>
+        <section className="flex flex-col justify-between h-full">
+          <div className="flex flex-col mt-5 gap-y-4 text-gray-700">
+            <div className="pb-3  flex flex-col gap-y-3   border-b-2 border-dashed border-gray-400">
               <SidebarLink
-                href='/view-your-collection'
-                icon={''}
-                label={'Yours collection'}
+                href="/promotion"
+                icon={""}
+                label={"Promotion"}
                 onClick={handleClose}
-                className='!text-pink-600 font-semibold'
-
+                className="!text-pink-600  font-bold"
               />
               <SidebarLink
-                href='/customize-your-collection'
-                icon={''}
-                label={'Customize yours collection'}
+                href="/special-deal"
+                icon={""}
+                label={"Special deal"}
                 onClick={handleClose}
-                  className='!text-gray-600'
-              />
-            </div>
-
-            <div className='pb-5  flex flex-col gap-y-5 border-b-2 border-dashed border-gray-400'>
-              <SidebarLink
-                href='/view-viva-collection'
-                icon={''}
-                label={'Viva collection'}
-                onClick={handleClose}
-                   className='!text-pink-600 font-semibold'
-              />
-              <SidebarLink
-                href='customize-viva-collection'
-                icon={''}
-                label={'Customize viva collection'}
-                onClick={handleClose}
-                       className='!text-gray-600'
+                className="!text-pink-600 font-bold"
               />
             </div>
 
-            <div className='pb-5  flex flex-col gap-y-5 border-b-2 border-dashed border-gray-400'>
+            <div className=" pb-3  flex flex-col gap-y-3 border-b-2 border-dashed border-gray-400">
               <SidebarLink
-                href='/view-blair-collection'
-                icon={''}
-                label={'Blair collection'}
+                href="/view-your-collection"
+                icon={""}
+                label={"Yours collection"}
                 onClick={handleClose}
-                   className='!text-pink-600 font-semibold'
+                className="!text-pink-600 font-semibold"
               />
               <SidebarLink
-                href='customize-blair-collection'
-                icon={''}
-                label={'Customize blair collection'}
+                href="/customize-your-collection"
+                icon={""}
+                label={"Customize yours collection"}
                 onClick={handleClose}
-                       className='!text-gray-600'
+                className="!text-gray-600"
               />
             </div>
 
-            <div className=' border-gray-800 flex flex-col gap-y-5'>
-             <SidebarLink
-               href="/view-riri-collection"
-               icon={""}
-               label={"Riri's collection"} // ❌ This causes an error
-               onClick={handleClose}
-               className="!text-pink-600 font-semibold"
-             />
+            <div className="pb-3  flex flex-col gap-y-3 border-b-2 border-dashed border-gray-400">
               <SidebarLink
-                href='/customize-riri-collection'
-                icon={''}
-                label={'Customize riri collection'}
+                href="/view-viva-collection"
+                icon={""}
+                label={"Viva collection"}
                 onClick={handleClose}
-                       className='!text-gray-600'
+                className="!text-pink-600 font-semibold"
+              />
+              <SidebarLink
+                href="customize-viva-collection"
+                icon={""}
+                label={"Customize viva collection"}
+                onClick={handleClose}
+                className="!text-gray-600"
+              />
+            </div>
+
+            <div className="pb-3  flex flex-col gap-y-3 border-b-2 border-dashed border-gray-400">
+              <SidebarLink
+                href="/view-blair-collection"
+                icon={""}
+                label={"Blair collection"}
+                onClick={handleClose}
+                className="!text-pink-600 font-semibold"
+              />
+              <SidebarLink
+                href="customize-blair-collection"
+                icon={""}
+                label={"Customize blair collection"}
+                onClick={handleClose}
+                className="!text-gray-600"
+              />
+            </div>
+
+            <div className="pb-3  flex flex-col gap-y-3 border-b-2 border-dashed border-gray-400">
+              <SidebarLink
+                href="/view-riri-collection"
+                icon={""}
+                label={"Riri's collection"}
+                onClick={handleClose}
+                className="!text-pink-600 font-semibold"
+              />
+              <SidebarLink
+                href="/customize-riri-collection"
+                icon={""}
+                label={"Customize riri collection"}
+                onClick={handleClose}
+                className="!text-gray-600"
               />
             </div>
           </div>
         </section>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-const WrappedComponent = withMobileSidebar(MobileSidebar)
-export default WrappedComponent
+const WrappedComponent = withMobileSidebar(MobileSidebar);
+export default WrappedComponent;
