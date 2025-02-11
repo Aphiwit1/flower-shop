@@ -28,6 +28,6 @@ export default function Home() {
 }
 
 export const metadata: Metadata = {
-  title: 'Bloem wesnesday | home',
+  title: 'Bloem wednesday | home',
   description: '...',
 }

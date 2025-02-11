@@ -14,7 +14,7 @@ const geistMono = Noto_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  title: "Bloem wesnesday",
+  title: "Bloem wednesday",
   description: "Flower shop",
 };
 

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <div className="relative max-w-[500px] mx-auto pt-14">
+    <div className="relative max-w-[500px] mx-auto pt-14 ">
       <Image
         src="/img/viva-collection/viva-view-collection-1-4x.png"
         alt="view your collection 1"
