@@ -2,7 +2,7 @@
 import withMobileSidebar from "./withMobileSidebar";
 import { MobileSidebarProps } from "./interface";
 import Link from "next/link";
-import { useRouter } from "next/router";
+
 import { useState, useEffect } from "react";
 import { FaRegHandPointRight } from "react-icons/fa";
 
@@ -28,8 +28,7 @@ const SidebarLink = ({
   isExternalLink = false,
 }: SidebarLinkProps) => {
   const pathname = usePathname(); // Get the current pathname
-  console.log("pathname::",pathname)
-  console.log("href::",href)
+
   const isActive = pathname === href; // Compare current pathname with href to check if active
 
   const activeClass = isActive ? 'border-b-2 border-pink-500 ' : ''; // Define active state styles
