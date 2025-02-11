@@ -3,7 +3,6 @@ import withMobileSidebar from "./withMobileSidebar";
 import { MobileSidebarProps } from "./interface";
 import Link from "next/link";
 
-import { useState, useEffect } from "react";
 import { FaRegHandPointRight } from "react-icons/fa";
 
 
