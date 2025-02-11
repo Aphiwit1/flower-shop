@@ -8,7 +8,10 @@ export default function Navbar() {
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false)
 
   const handleOnToggleMobileSidebar = (isOpen: boolean) => {
-    setIsMobileSidebarOpen(isOpen)
+    setTimeout(() => {
+      setIsMobileSidebarOpen(isOpen)
+    },300)
+  
   }
   return (
     <nav className="border-gray-200 bg-pink-50 cursor-pointer">
@@ -22,8 +25,16 @@ export default function Navbar() {
       </svg>
       <span className='text-xs'>Menu</span>
       </button>
+      <div
+  className={`fixed top-0 right-0 h-full w-full bg-white shadow-lg transition-transform duration-500 ${
+    isMobileSidebarOpen
+      ? "translate-x-0 opacity-100 transition-delay-0"
+      : "translate-x-full opacity-0 transition-delay-2000"
+  }`}
+>
+  <MobileSidebar handleOnToggleMobileSidebar={handleOnToggleMobileSidebar} />
+</div>
 
-{isMobileSidebarOpen &&  <MobileSidebar handleOnToggleMobileSidebar={handleOnToggleMobileSidebar}/>}
      
   </div>
 </nav>
